@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\DevChecks Task.props" />
+</Project>

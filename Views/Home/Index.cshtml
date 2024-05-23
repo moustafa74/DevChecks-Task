@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Add New Employee</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <h2 class="h2 text-center">Add New Employee</h2>
+    <form class="mt-4 w-50 mx-auto" id="employeeForm" method="post">
+        <input id="Id" type="hidden" name="id" /> @*  hidden Id for send Employee_Id that need to update becouse this form used for update and add new *@
+
+        <div class="mb-3">
+            <label for="name" class="form-label">Employee Name:</label>
+            <input type="text" class="form-control" id="name" name="name" title="Please Enter Your Name" required>
+            <span id="name-error" class="text-danger"></span>  @* if there is any erorr in the name it will shown here(for validate name) *@
+        </div>
+
+        <div class="mb-3">
+            <label for="job_role" class="form-label">Job Role:</label>
+            <select class="form-select" id="job_role" required name="job_role">
+                <option value="">Select Job Role</option>
+                <option value="Manager">Manager</option>
+                <option value="Developer">Developer</option>
+                <option value="Designer">Designer</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Gender:</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" id="male" name="gender" required value="Male">
+                <label class="form-check-label" for="male">Male</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" id="female" name="gender" value="Female">
+                <label class="form-check-label" for="female">Female</label>
+            </div>
+        </div>
+
+        <div class="mb-3 form-check">
+            <input class="form-check-input" type="checkbox" id="isfirst_appointment" name="isfirst_appointment">
+            <label class="form-check-label" for="isfirst_appointment">First Appointment</label>
+        </div>
+
+        <div class="mb-3">
+            <label for="start_date" class="form-label">Start Date:</label>
+            <input type="date" class="form-control" id="start_date" name="start_date" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="notes" class="form-label">Notes:</label>
+            <textarea class="form-control" id="notes" name="notes" rows="4"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+    <h2 class="h2 mt-5 text-center">All Employees</h2>  @* Table tp show Employees data  *@
+    <table class="table-primary table w-100 mt-3 text-center"> 
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Employee Name</th>
+                <th>Job Role</th>
+                <th>Gender</th>
+                <th>First Appointment</th>
+                <th>Start Date</th>
+                <th>Notes</th>
+                <th></th>  @*  Edit *@
+                <th></th>   @* Delete *@
+            </tr>
+        </thead>
+        <tbody id="employeeList"> </tbody>
+    </table>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>   
+    <script src="~/js/master.js" asp-append-version="true"></script>   @* JS file  *@
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
