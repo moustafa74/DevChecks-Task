@@ -9,10 +9,10 @@ Client-Side Validation: The form includes JavaScript validation to ensure data a
 Server-Side Validation : The API include additional server-side validation logic.
 CRUD Operations: The application supports Create, Read, Update, and Delete (CRUD) operations on employee data.
 ## Technologies Used
-Frontend: ASP.NET Core MVC , HTML, CSS, JavaScript (jQuery)
-Backend: ASP.NET Core Web API
-Database: SQL Server
-ORM : Entity Framework Core
+Frontend: ASP.NET Core MVC , HTML, CSS, JavaScript (jQuery).
+Backend: ASP.NET Core Web API.
+Database: SQL Server.
+ORM : Entity Framework Core.
 
 ## Code Structure
 Models: Defines the Employee class to represent employee data.
